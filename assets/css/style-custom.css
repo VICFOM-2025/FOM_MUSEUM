@@ -291,16 +291,10 @@ button {
 #timeline {
   display: flex;
   background-color: #031625;
-
-  &:hover {
-    .tl-item {
-      width: 23.3333%;
-    }
-  }
+  /* Removed hover effect */
 }
 
 .tl-item {
-/*   transform: translate3d(0, 0, 0); */
   position: relative;
   width: 25%;
   height: 100vh;
@@ -324,47 +318,33 @@ button {
   }
 
   &:before {
-/*     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000de 100%); */
     z-index: 1;
     opacity: 0;
     transform: translate3d(0, 0, 0) translateY(50%);
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
-  &:hover {
-/*     width: 30% !important; */
-    
-    &:after {
-      opacity: 0;
-    }
+  /* Removed hover effect for .tl-item */
+  .tl-content {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.75s ease 0.5s;
+  }
 
-    &:before {
-      opacity: 1;
-      transform: translate3d(0, 0, 0) translateY(0);
-      transition: opacity 1s ease, transform 1s ease 0.25s;
-    }
-    
-    .tl-content {
-      opacity: 1;
-      transform: translateY(0);
-      transition: all 0.75s ease 0.5s;
-    }
-
-    .tl-bg {
-      filter: grayscale(0);
-    }
+  .tl-bg {
+    filter: grayscale(50%);
   }
 }
 
 .tl-item .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255 137 0 / 35%);
-    pointer-events: none;
-    mix-blend-mode: color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 137 0 / 35%);
+  pointer-events: none;
+  mix-blend-mode: color;
 }
 
 .tl-content {
@@ -390,21 +370,22 @@ button {
 }
 
 .tl-year p {
-	color: #fff;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .tl-bg {
   transform: translate3d(0, 0, 0);
   position: absolute;
-  width: 100%; height: 100%;
-  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   background-size: cover;
   background-position: center center;
   transition: filter 0.5s ease;
-/*   filter: grayscale(50%); */
 }
 
 .btn-panel {

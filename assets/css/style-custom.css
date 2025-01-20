@@ -80,6 +80,7 @@ ul.biography-table h5 {
 /* GLITTER SPARKLE - FRONT PAGE */
 
 .glitter-bg {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;

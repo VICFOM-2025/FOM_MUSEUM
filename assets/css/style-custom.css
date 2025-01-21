@@ -530,7 +530,7 @@ img.photos-tsl-inside {
 }
 
 img.photos-tsl-inside-h {
-    max-width: 65vh;
+    max-width: 100vh;
     max-height: 70vh;
     transition: .5s;
     vertical-align: top;

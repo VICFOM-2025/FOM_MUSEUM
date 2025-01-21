@@ -74,7 +74,7 @@ ul.biography-table h5 {
 .modal-content .modal-header {
 	position: fixed;
     right: 40px;
-    bottom: 40px;
+    bottom: 70px;
 }
 
 /* GLITTER SPARKLE - FRONT PAGE */
@@ -1661,7 +1661,7 @@ img.quote-inside {
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 100px;
 }
 
 .card-game-for-2 {

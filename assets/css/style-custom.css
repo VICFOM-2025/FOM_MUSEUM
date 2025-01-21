@@ -1599,8 +1599,8 @@ img.quote-inside {
   background: linear-gradient(45deg, #996912, #bf9756, #996912);
   border-radius: 15px;
   padding: 1vh;
-  min-width: 382px;
-  height: 300px;
+  min-width: 530px;
+  height: 420px;
 }
 
 .card-game img {

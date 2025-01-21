@@ -530,7 +530,7 @@ img.photos-tsl-inside {
 }
 
 img.photos-tsl-inside-h {
-    max-width: 100vh;
+    max-width: 90vh;
     max-height: 70vh;
     transition: .5s;
     vertical-align: top;
@@ -1283,7 +1283,8 @@ img.quote-inside {
 /* Table header styles */
 .responsive-table thead th {
   background-color: #8c7c53; /* Light gray header background */
-  color: #fff;
+  color: #000;
+  font-size: 16px;
   font-weight: bold;
   padding: 10px;
   border: 1px solid #ddd;
@@ -1306,6 +1307,8 @@ img.quote-inside {
 /* Table cell padding */
 .responsive-table td {
   padding: 10px;
+  color: #000;
+  font-size: 14px;
 }
 
 /* Responsive adjustment for smaller screens */

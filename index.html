@@ -72,6 +72,15 @@
             border: none;
             /* Remove the border */
         }
+
+        a {
+            user-select: none;
+            /* Disable text selection */
+            text-decoration: none;
+            /* Remove underline if needed */
+            color: inherit;
+            /* Keep text color consistent */
+        }
     </style>
 
     <!--[if lte IE 9]>
@@ -3689,6 +3698,24 @@
 
     <!-- disabled cp and select  -->
     <script>
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            // Prevent drag events
+            link.addEventListener("dragstart", (e) => {
+                e.preventDefault();
+            });
+
+            // Prevent copying the link text or URL
+            link.addEventListener("copy", (e) => {
+                e.preventDefault();
+            });
+
+            // Optional: Prevent right-click context menu on links
+            link.addEventListener("contextmenu", (e) => {
+                e.preventDefault();
+            });
+        });
         $(function () {
             $(this).bind("contextmenu", function (e) {
                 e.preventDefault();

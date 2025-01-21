@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ventix - Personal Portfolio Template">
+    <meta http-equiv="imagetoolbar" content="no" />
+
+    <!-- ========== Page Title ========== -->
+    <title>Tan Sri Dr. Lim Wee Chai</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="https://hdayat665.github.io/MUZIUM-UM/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/flaticon-set.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/animate.min.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/validnavs.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/helper.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/unit-test.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/style.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/style.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/style-custom.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games22.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games23.css" rel="stylesheet">
+    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games2.css" rel="stylesheet">
+
+</head>
+
+<!-- <body class="bg-fixed home-vcard" style="background-image: url(https://hdayat665.github.io/MUZIUM-UM/shape/banner.jpg);"> -->
+
+<body class="bg-fixed home-vcard"
+    style="background-image: url('https://hdayat665.github.io/MUZIUM-UM/interactive/bg-home-game.jpg');">
+
+    <section id="games1">
+        <div class="main-wrapper" data-enter="fadeInLeft" data-exit style="margin-left: 0;">
+            <div class="main-content-area">
+                <div class="preloader">
+                    <div class="preloader-content">
+                        <div class="preloader-logo">
+                            <span class="preloader-logo__letter">T</span>
+                            <span class="preloader-logo__letter">A</span>
+                            <span class="preloader-logo__letter">N</span>
+                            <span class="preloader-logo__letter"></span>
+                            <span class="preloader-logo__letter">S</span>
+                            <span class="preloader-logo__letter">R</span>
+                            <span class="preloader-logo__letter">I</span>
+                            <span class="preloader-logo__letter"></span>
+                            <span class="preloader-logo__letter">D</span>
+                            <span class="preloader-logo__letter">R</span>
+                            <span class="preloader-logo__letter">.</span>
+                            <span class="preloader-logo__letter"></span>
+                            <span class="preloader-logo__letter">L</span>
+                            <span class="preloader-logo__letter">I</span>
+                            <span class="preloader-logo__letter">M</span>
+                            <span class="preloader-logo__letter"></span>
+                            <span class="preloader-logo__letter">G</span>
+                            <span class="preloader-logo__letter">A</span>
+                            <span class="preloader-logo__letter">M</span>
+                            <span class="preloader-logo__letter">E</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-start">
+                    <div class="section-item animated" id="home">
+                        <div class="banner-style-quiz">
+                            <div id="quiz">
+                                <div class="banner-top-quiz">
+                                    <div class="row-quiz">
+                                        <div class="col-lg-12 pr-50">
+                                            <div id="quiz-stats" class="row text-center">
+                                                <div class="col-xs-3">
+                                                    <i class="fa fa-bar-chart"></i>
+                                                </div>
+                                                <div class="col-xs-3 col-lg-4">
+                                                    <p>Correct Rate</p>
+                                                    <span id="rate-span" class="animated">0/0</span>
+                                                </div>
+                                                <div class="col-xs-3 col-lg-4">
+                                                    <p>Correct Answer</p>
+                                                    <span id="streak-span" class="animated">0</span>
+                                                </div>
+                                                <div class="col-xs-3 col-lg-4">
+                                                    <p><span>Avg. </span>Response Time (s)</p>
+                                                    <span id="response-time-span" class="animated">0</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-10 col-md-offset-1 text-center"
+                                            style="margin: 0 auto;">
+                                            <div id="quiz-question"></div>
+                                            <div id="quiz-options"></div>
+                                        </div>
+                                        <div id="quiz-play-again">
+                                            <button id="quiz-play-again-btn">Play Again</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- wrong modal -->
+                <div class="modal fade project-details" id="wrongAnswerModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-body">
+
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <div class="project-details-area">
+                                    <div class="container">
+                                        <div class="project-details-items">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="project-details mt-60 mt-xs-30">
+                                                        <div class="top-info">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 text-center py-5"
+                                                                    style="position: absolute; top: 40%; left: 0%;">
+                                                                    <h3>
+                                                                        To learn more, please read Tan Sri Dr. Lim Wee
+                                                                        Chai's biography summary available at the
+                                                                        entrance to the museum.
+                                                                    </h3>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="scroll-info" id="games1Back">
+                    <a href="https://hdayat665.github.io/MUZIUM-UM/gamesHomepage.html">
+                        <span class="icon" style="display: flex; align-item fadeins: center;">
+                            <img src="https://hdayat665.github.io/MUZIUM-UM/logo/back-arrow.svg"
+                                style="width: 40px; margin-right: 5px;">
+                        </span>
+                    </a>
+                    <a href="https://hdayat665.github.io/MUZIUM-UM/index.html">
+                        <span class="icon" style="display: flex; align-item fadeins: center;">
+                            <img src="https://hdayat665.github.io/MUZIUM-UM/logo/home.svg"
+                                style="width: 40px; margin-right: 5px;">
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.appear.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/swiper-bundle.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/progress-bar.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/circle-progress.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/isotope.pkgd.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/count-to.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.scrolla.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/ScrollOnReveal.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/YTPlayer.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/validnavs.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/gsap.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/typed.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/TweenMax.min.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/main.js"></script>
+    <script src="https://hdayat665.github.io/MUZIUM-UM/gamesJs/games23.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <!-- <script type="text/javascript" language="javascript" src="matchgame.js"></script> -->
+    <!-- <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.easing.min.js"></script> -->
+
+    <!-- screen saver function -->
+    <script>
+        games1Js();
+
+        function games1Js() {
+            resetGames();
+
+            function showWrongAnswerModal() {
+                const modal = new bootstrap.Modal(document.getElementById('wrongAnswerModal'));
+                modal.show();
+            }
+
+            // Handle "quiz-play-again-btn" Click
+            document.querySelector("#quiz-play-again-btn").addEventListener("click", function () {
+                resetGames();
+            });
+
+            const originalQuestions = [{
+                    question: "1. Tan Sri Dr. Lim Wee Chai was born in...",
+                    answers: [{
+                            answer: "Klang",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Johor",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Penang",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Titi",
+                            isCorrect: true
+                        }
+                    ]
+                },
+                {
+                    question: "2. Tan Sri Dr. Lim Wee Chai began his career at...",
+                    answers: [{
+                            answer: "Petronas",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "OYL Industries Sdn Bhd",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "OCBC",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Sime Darby",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "3. Which Company Did Tan Sri Dr Lim Start?",
+                    answers: [{
+                            answer: "Hartalega",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Top Glove",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "Kossan",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Riverstone",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "4. Top Glove listed on Bursa Malaysia in...",
+                    answers: [{
+                            answer: "2001",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "1995",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "2016",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "1985",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "5. Top Glove Global Doctors Medical Centre and Dental Care was established by Tan Sri Dr. Lim Wee Chai in...",
+                    answers: [{
+                            answer: "2000",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "1996",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "2013",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "2017",
+                            isCorrect: true
+                        }
+                    ]
+                },
+                {
+                    question: "6. Top Glove was founded by Tan Sri Dr. Lim Wee Chai and his...",
+                    answers: [{
+                            answer: "Brother",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Best friend",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Wife",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "Cousin",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "7. From Universiti Malaya, Tan Sri Dr. Lim Wee Chai graduated with a Bachelor of Science in...",
+                    answers: [{
+                            answer: "Information Technology",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Chemistry",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "Physics",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "Astronomy",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "8. Tan Sri Dr. Lim Wee Chai is the second of ____ children.",
+                    answers: [{
+                            answer: "four",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "seven",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "six",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "nine",
+                            isCorrect: false
+                        }
+                    ]
+                },
+                {
+                    question: "9. In 2024, Top Glove had over _______ employees globally.",
+                    answers: [{
+                            answer: "12,500",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "11,000",
+                            isCorrect: true
+                        },
+                        {
+                            answer: "8,000",
+                            isCorrect: false
+                        },
+                        {
+                            answer: "9,500",
+                            isCorrect: false
+                        }
+                    ]
+                }
+            ];
+
+
+            document.addEventListener("click", function (event) {
+                if (event.target.classList.contains("quiz-ans-btn")) {
+                    Array.from(document.querySelectorAll(".quiz-ans-btn")).forEach(btn => btn.disabled =
+                        true); // Disable buttons
+                    event.target.blur();
+                    const choice = Number(event.target.id.split("-")[2]);
+
+                    const responseTime = round((new Date() - stats.currentTime) / 1000, 2);
+                    stats.averageResponseTime = round((stats.averageResponseTime * (stats
+                        .questionsAsked -
+                        1) + responseTime) / stats.questionsAsked, 2);
+                    console.log('ss');
+                    if (questions[0].answers[choice].isCorrect) {
+                        event.target.classList.add("pulse", "correct");
+                        stats.correct++;
+                        stats.correctStreak++;
+                        setTimeout(() => {
+                            nextQuestion();
+                        }, 1250);
+                    } else {
+                        event.target.classList.add("shake", "incorrect");
+                        stats.correctStreak = 0;
+                        setTimeout(() => {
+                            const correctAnswerId = "quiz-ans-" + questions[0].answers
+                                .findIndex(
+                                    elem => elem.isCorrect);
+                            document.querySelector("#" + correctAnswerId).classList.add(
+                                "correct");
+
+                            setTimeout(() => {
+                                showWrongAnswerModal();
+                            }, 1500);
+                            setTimeout(() => {
+                                nextQuestion();
+                            }, 2500);
+                        }, 750);
+                    }
+                    displayStats();
+                }
+            });
+
+            document.querySelector(".quiz-ans-btn").addEventListener("click", function () {
+                attachClickListener(); // Reattach the click listener
+            });
+
+            function resetGames() {
+                // addEventListeners();
+                document.querySelector("#quiz-play-again-btn").classList.remove("infinite", "pulse");
+                document.querySelector("#quiz-play-again-btn").classList.add("flipOutX");
+                setTimeout(() => {
+                    document.querySelector("#quiz-play-again-btn").classList.remove("flipOutX");
+                    document.querySelector("#quiz-play-again").style.display = "none";
+
+                    // Reset questions array to its original state
+                    questions = JSON.parse(JSON.stringify(
+                        originalQuestions)); // Assuming originalQuestions is your initial set of questions
+
+                    stats = {
+                        questionsAsked: 0,
+                        correct: 0,
+                        correctStreak: 0,
+                        currentTime: null,
+                        averageResponseTime: 0
+                    };
+
+                    // Clear the question and options from the UI
+                    document.querySelector("#quiz-question").innerHTML = "";
+                    document.querySelector("#quiz-options").innerHTML = "";
+                    displayStats();
+                    initiateGame();
+                }, 550);
+            }
+
+            // Initiate New Game
+            function initiateGame() {
+                displayQuestion(questions[0]);
+            }
+
+            // Display Question
+            function displayQuestion(questionObject) {
+                document.querySelector("#quiz-options").innerHTML = '';
+                document.querySelector("#quiz-question").innerHTML = '';
+                document.querySelector("#quiz-question").innerHTML = questionObject.question;
+                stats.questionsAsked++;
+                stats.currentTime = new Date();
+                for (let i = 0; i < questionObject.answers.length; i++) {
+                    let button = document.createElement("button");
+                    button.id = "quiz-ans-" + i;
+                    button.classList.add("btn", "quiz-ans-btn");
+                    button.innerHTML = questionObject.answers[i].answer;
+                    button.disabled = false;
+                    document.querySelector("#quiz-options").appendChild(button);
+                }
+            }
+
+            function nextQuestion() {
+                document.querySelector("#quiz-question").innerHTML = '';
+                document.querySelector("#quiz-options").innerHTML = '';
+
+                if (questions.length > 1) {
+                    questions.shift(); // Remove the first question
+                    displayQuestion(questions[0]);
+                } else {
+                    // document.querySelector('#games1Back').style.display = "block";
+                    document.querySelector("#quiz-play-again").style.display = "block";
+                }
+            }
+
+            function displayStats() {
+                document.querySelector("#rate-span").innerHTML = stats.correct + "/" + stats.questionsAsked;
+                document.querySelector("#streak-span").innerHTML = stats.correct;
+                document.querySelector("#response-time-span").innerHTML = stats.averageResponseTime;
+            }
+
+            function round(value, decimals) {
+                return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
+            }
+        }
+    </script>
+</body>
+
+</html>

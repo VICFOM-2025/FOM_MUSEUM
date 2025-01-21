@@ -333,10 +333,9 @@
 
                 <style>
                     .text-blink {
-                        float: left;
+                        right: 9%;
                         position: absolute;
-                        bottom: 1%;
-                        left: 1%;
+                        bottom: 1.5%;
                         font-size: large;
                     }
 
@@ -348,164 +347,298 @@
                     .blink-hard {
                         animation: blinker 1s step-end infinite;
                     }
+
+                      /* Main styling */
+.external {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  animation: scroll-horizontal 20s linear infinite;
+  width: max-content;
+}
+
+.horizontal-scroll-wrapper.paused {
+  animation-play-state: paused; /* Stops animation */
+}
+
+/* Scrolling animation */
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.img-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+img.photos-tsl {
+  max-height: 50vh;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Modal styling */
+./* Fullscreen modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+/* Modal content */
+.modal-content {
+  background-image: url('https://hdayat665.github.io/MUZIUM-UM/interactive/bg-landing-plain.jpg'); /* Background image */
+  background-size: cover; /* Cover the entire modal */
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Title */
+#modal-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Image inside the modal */
+#modal-image {
+  max-width: 90%; /* Ensures image is responsive */
+  max-height: 80vh; /* Prevents image from being too tall */
+  object-fit: contain; /* Keeps the aspect ratio of the image */
+  border-radius: 10px; /* Optional: rounded corners for the image */
+}
+
+/* Description */
+#modal-description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+  max-width: 90%; /* Ensure description doesn't overflow */
+  white-space: pre-wrap; /* Allows line breaks from the HTML description */
+}
+
+/* For when modal is visible */
+.modal.show {
+  display: flex;
+}
+
+
+.modal-content p.description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.modal-content img {
+  max-width: 90%;
+  max-height: 60vh;
+  border-radius: 10px;
+}
+
+.modal-content p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+/* Apply gradient border to each image */
+.image-frame {
+  display: inline-block;
+  padding: 5px; /* Inner spacing between image and border */
+  background: linear-gradient(45deg, #FFD700, #FF8C00, #FFD700); /* Gradient border */
+  border-radius: 15px; /* Rounded corners for the border */
+  position: relative;
+  overflow: hidden; /* Ensures no overflow */
+}
+
+/* Adding a hover effect on the image */
+.image-frame:hover {
+  border-color: #FF5722; /* Change frame color on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Slightly larger shadow */
+}
+
+/* Image styling */
+img.photos-tsl {
+  display: block; /* Removes unwanted spacing below image */
+  max-width: 100%; /* Ensures image is responsive */
+  height: auto; /* Maintain the aspect ratio of the image */
+  border-radius: 10px; /* Optional: rounded corners on the image */
+  transition: transform 0.5s ease-in-out; /* Optional: Add a smooth transition effect */
+}
+
+
                 </style>
                 <h1 class="text-red blink-hard text-blink">Tap photo <br>to enlarge</h1>
                 <div class="external">
-                    <div class="horizontal-scroll-wrapper">
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto1">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo1.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper faster">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto2">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo2.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower vertical">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto3">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo3.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower slower-down">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto4">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo4.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto5">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo5.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto6">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo6.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper faster1">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto7">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo7.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower slower2">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto7">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo8.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto7">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo9.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto10">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo10.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto11">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo11.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper faster">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto12">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo12.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <!-- <div class="img-wrapper slower vertical">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto13">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo13.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div> -->
-
-                        <div class="img-wrapper slower slower-down">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto14">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo14.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto15">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo15.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto16">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo16.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper faster1">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto17">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo17.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower slower2">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto18">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo18.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto19">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo19.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper slower">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto20">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo20.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <div class="img-wrapper faster1">
-                            <a href="#" class="image-frame" data-bs-toggle="modal" data-bs-target="#popphoto21">
-                                <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo21.jpg"
-                                    alt="Thumb">
-                            </a>
-                        </div>
-
-                        <!-- <div class="img-wrapper slower last">
-                      <a href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/" target="_blank" rel="noopener">
-                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/74321/shop-window-reflection.jpg" alt="">
-                      </a>
-                    </div> -->
+                    <div class="horizontal-scroll-wrapper" id="gallery-new">
+                      <!-- Original Images -->
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo1.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo2.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo3.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo4.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo5.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo6.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo7.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo8.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo9.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo10.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo11.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo12.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo13.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo14.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo15.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo16.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo17.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo18.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo19.jpg" alt="Thumb">
+                          </a>
+                      </div>
+                      <div class="img-wrapper">
+                          <a href="#" class="image-frame" data-title="">
+                            <img class="photos-tsl" src="https://hdayat665.github.io/MUZIUM-UM/gallery/photo20.jpg" alt="Thumb">
+                          </a>
+                      </div>
                     </div>
-                    <p class="scroll-info">
+                  </div>
+
+                   <!-- Pop-Up Modal -->
+  <div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <img id="modal-image" alt="Modal Image">
+    <p id="modal-description" class="description"></p>
+  </div>
+</div>
+
+
+  <p class="scroll-info">
                         <a href="#" onclick="showFourpanel()">
                             <span class="icon" style="display: flex; align-items: center;">
                                 <img src="https://hdayat665.github.io/MUZIUM-UM/logo/back-arrow.svg"
@@ -519,11 +652,11 @@
                             </span>
                         </a>
                     </p>
-                </div>
 
                 <div>
+
                     <!-- Start Projects Single Modal -->
-                    <div class="modal fade project-details" id="popphoto1" tabindex="-1" aria-hidden="true">
+                    <!-- <div class="modal fade project-details" id="popphoto1" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen">
                             <div class="modal-content">
                                 <div class="modal-body">
@@ -575,7 +708,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- End Projects Single Modal -->
 
                     <!-- Start Projects Single Modal -->
@@ -4692,7 +4825,11 @@
                     {
                         question: "3. Which Company Did Tan Sri Dr Lim Start?",
                         answers: [{
-                                answer: "Riverside",
+                                answer: "Hartalega",
+                                isCorrect: false
+                            },
+                            {
+                                answer: "Kossan",
                                 isCorrect: false
                             },
                             {
@@ -4700,11 +4837,7 @@
                                 isCorrect: true
                             },
                             {
-                                answer: "Kossan",
-                                isCorrect: false
-                            },
-                            {
-                                answer: "Rome",
+                                answer: "Riverstone",
                                 isCorrect: false
                             }
                         ]
@@ -6286,6 +6419,58 @@
             glitterBg.appendChild(sparkle);
         }
     </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modal-image");
+  const modalTitle = document.getElementById("modal-title");
+  const modalDescription = document.getElementById("modal-description");
+  const closeModal = document.querySelector(".close");
+  const horizontalScrollWrapper = document.querySelector(".horizontal-scroll-wrapper");
+
+  // Open modal on image click
+  const imgWrappers = document.querySelectorAll(".img-wrapper");
+  imgWrappers.forEach((wrapper) => {
+    wrapper.addEventListener("click", () => {
+      const imgSrc = wrapper.querySelector("img").src;
+      const title = wrapper.dataset.title;
+      const description = wrapper.dataset.description;
+
+      // Show modal content
+      modalImage.src = imgSrc;
+      modalTitle.textContent = title;
+      modalDescription.innerHTML = description; // Allows HTML in description
+      modal.classList.add("show"); // Display modal
+
+      // Pause animation
+      horizontalScrollWrapper.classList.add("paused");
+    });
+  });
+
+  // Close modal on "X" click
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("show"); // Hide modal
+
+    // Resume animation
+    horizontalScrollWrapper.classList.remove("paused");
+  });
+
+  // Close modal on clicking outside the content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show"); // Hide modal
+
+      // Resume animation
+      horizontalScrollWrapper.classList.remove("paused");
+    }
+  });
+});
+
+
+
+
+  </script>
 
 </body>
 

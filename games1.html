@@ -151,6 +151,46 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal for Prize Eligibility -->
+                <div class="modal fade" id="prizeEligibilityModal" tabindex="-1"
+                    aria-labelledby="prizeEligibilityModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="prizeEligibilityModalLabel">Congratulations!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                You answered 7 questions correctly and are eligible to win the prize!
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for Completion -->
+                <div class="modal fade" id="completionModal" tabindex="-1" aria-labelledby="completionModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="completionModalLabel">Great Job!</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Congratulations on completing all the questions! Thank you for participating.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- <p class="scroll-info" id="games1Back">
                     <a href="https://hdayat665.github.io/MUZIUM-UM/gamesHomepage.html">
                         <span class="icon" style="display: flex; align-item fadeins: center;">
@@ -206,191 +246,202 @@
                 modal.show();
             }
 
+            function showPrizeEligibilityModal() {
+                const modal = new bootstrap.Modal(document.getElementById('prizeEligibilityModal'));
+                modal.show();
+            }
+
+            // Function to show the "Congratulations" modal
+            function showCompletionModal() {
+                const modal = new bootstrap.Modal(document.getElementById('completionModal'));
+                modal.show();
+            }
+
             // Handle "quiz-play-again-btn" Click
             document.querySelector("#quiz-play-again-btn").addEventListener("click", function () {
                 resetGames();
             });
 
             const originalQuestions = [{
-                    question: "1. Tan Sri Dr. Lim Wee Chai was born in...",
-                    answers: [{
-                            answer: "Klang",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Johor",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Penang",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Titi",
-                            isCorrect: true
-                        }
-                    ]
+                question: "1. Tan Sri Dr. Lim Wee Chai was born in...",
+                answers: [{
+                    answer: "Klang",
+                    isCorrect: false
                 },
                 {
-                    question: "2. Tan Sri Dr. Lim Wee Chai began his career at...",
-                    answers: [{
-                            answer: "Petronas",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "OYL Industries Sdn Bhd",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "OCBC",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Sime Darby",
-                            isCorrect: false
-                        }
-                    ]
+                    answer: "Johor",
+                    isCorrect: false
                 },
                 {
-                    question: "3. Which Company Did Tan Sri Dr Lim Start?",
-                    answers: [{
-                            answer: "Hartalega",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Top Glove",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "Kossan",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Riverstone",
-                            isCorrect: false
-                        }
-                    ]
+                    answer: "Penang",
+                    isCorrect: false
                 },
                 {
-                    question: "4. Top Glove listed on Bursa Malaysia in...",
-                    answers: [{
-                            answer: "2001",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "1995",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "2016",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "1985",
-                            isCorrect: false
-                        }
-                    ]
-                },
-                {
-                    question: "5. Top Glove Global Doctors Medical Centre and Dental Care was established by Tan Sri Dr. Lim Wee Chai in...",
-                    answers: [{
-                            answer: "2000",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "1996",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "2013",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "2017",
-                            isCorrect: true
-                        }
-                    ]
-                },
-                {
-                    question: "6. Top Glove was founded by Tan Sri Dr. Lim Wee Chai and his...",
-                    answers: [{
-                            answer: "Brother",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Best friend",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Wife",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "Cousin",
-                            isCorrect: false
-                        }
-                    ]
-                },
-                {
-                    question: "7. From Universiti Malaya, Tan Sri Dr. Lim Wee Chai graduated with a Bachelor of Science in...",
-                    answers: [{
-                            answer: "Information Technology",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Chemistry",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Physics",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "Astronomy",
-                            isCorrect: false
-                        }
-                    ]
-                },
-                {
-                    question: "8. Tan Sri Dr. Lim Wee Chai is the second of ____ children.",
-                    answers: [{
-                            answer: "four",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "seven",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "six",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "nine",
-                            isCorrect: false
-                        }
-                    ]
-                },
-                {
-                    question: "9. In 2024, Top Glove had over _______ employees globally.",
-                    answers: [{
-                            answer: "12,500",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "11,000",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "8,000",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "9,500",
-                            isCorrect: false
-                        }
-                    ]
+                    answer: "Titi",
+                    isCorrect: true
                 }
+                ]
+            },
+            {
+                question: "2. Tan Sri Dr. Lim Wee Chai began his career at...",
+                answers: [{
+                    answer: "Petronas",
+                    isCorrect: false
+                },
+                {
+                    answer: "OYL Industries Sdn Bhd",
+                    isCorrect: true
+                },
+                {
+                    answer: "OCBC",
+                    isCorrect: false
+                },
+                {
+                    answer: "Sime Darby",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "3. Which Company Did Tan Sri Dr Lim Start?",
+                answers: [{
+                    answer: "Hartalega",
+                    isCorrect: false
+                },
+                {
+                    answer: "Top Glove",
+                    isCorrect: true
+                },
+                {
+                    answer: "Kossan",
+                    isCorrect: false
+                },
+                {
+                    answer: "Riverstone",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "4. Top Glove listed on Bursa Malaysia in...",
+                answers: [{
+                    answer: "2001",
+                    isCorrect: true
+                },
+                {
+                    answer: "1995",
+                    isCorrect: false
+                },
+                {
+                    answer: "2016",
+                    isCorrect: false
+                },
+                {
+                    answer: "1985",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "5. Top Glove Global Doctors Medical Centre and Dental Care was established by Tan Sri Dr. Lim Wee Chai in...",
+                answers: [{
+                    answer: "2000",
+                    isCorrect: false
+                },
+                {
+                    answer: "1996",
+                    isCorrect: false
+                },
+                {
+                    answer: "2013",
+                    isCorrect: false
+                },
+                {
+                    answer: "2017",
+                    isCorrect: true
+                }
+                ]
+            },
+            {
+                question: "6. Top Glove was founded by Tan Sri Dr. Lim Wee Chai and his...",
+                answers: [{
+                    answer: "Brother",
+                    isCorrect: false
+                },
+                {
+                    answer: "Best friend",
+                    isCorrect: false
+                },
+                {
+                    answer: "Wife",
+                    isCorrect: true
+                },
+                {
+                    answer: "Cousin",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "7. From Universiti Malaya, Tan Sri Dr. Lim Wee Chai graduated with a Bachelor of Science in...",
+                answers: [{
+                    answer: "Information Technology",
+                    isCorrect: false
+                },
+                {
+                    answer: "Chemistry",
+                    isCorrect: false
+                },
+                {
+                    answer: "Physics",
+                    isCorrect: true
+                },
+                {
+                    answer: "Astronomy",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "8. Tan Sri Dr. Lim Wee Chai is the second of ____ children.",
+                answers: [{
+                    answer: "four",
+                    isCorrect: false
+                },
+                {
+                    answer: "seven",
+                    isCorrect: false
+                },
+                {
+                    answer: "six",
+                    isCorrect: true
+                },
+                {
+                    answer: "nine",
+                    isCorrect: false
+                }
+                ]
+            },
+            {
+                question: "9. In 2024, Top Glove had over _______ employees globally.",
+                answers: [{
+                    answer: "12,500",
+                    isCorrect: false
+                },
+                {
+                    answer: "11,000",
+                    isCorrect: true
+                },
+                {
+                    answer: "8,000",
+                    isCorrect: false
+                },
+                {
+                    answer: "9,500",
+                    isCorrect: false
+                }
+                ]
+            }
             ];
 
 
@@ -405,11 +456,15 @@
                     stats.averageResponseTime = round((stats.averageResponseTime * (stats
                         .questionsAsked -
                         1) + responseTime) / stats.questionsAsked, 2);
-                    console.log('ss');
+                    console.log('ssm');
                     if (questions[0].answers[choice].isCorrect) {
                         event.target.classList.add("pulse", "correct");
                         stats.correct++;
                         stats.correctStreak++;
+                        if (stats.correct == 7) {
+                            showPrizeEligibilityModal();
+                        }
+
                         setTimeout(() => {
                             nextQuestion();
                         }, 1250);
@@ -497,6 +552,7 @@
                     questions.shift(); // Remove the first question
                     displayQuestion(questions[0]);
                 } else {
+                    showCompletionModal();
                     // document.querySelector('#games1Back').style.display = "block";
                     document.querySelector("#quiz-play-again").style.display = "block";
                 }

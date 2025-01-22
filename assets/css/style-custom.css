@@ -1272,6 +1272,7 @@ img.quote-inside {
     border-radius: 15px;
     padding: 30px 50px;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Table */
@@ -1286,7 +1287,7 @@ img.quote-inside {
 .responsive-table {
   width: 100%;
   border-collapse: collapse; /* Remove gaps between table cells */
-  margin: 20px 0;
+  margin: 10px 0;
   font-size: 16px;
   text-align: left;
   border: 1px solid #ddd;
@@ -1344,6 +1345,10 @@ img.quote-inside {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.home-blog .blog-style-one .item .thumb .inner-date {
+  font-size: 13px;
 }
 
 /* Content Philosophy - Animation 120 Years */
@@ -1611,8 +1616,8 @@ img.quote-inside {
   background: linear-gradient(45deg, #996912, #bf9756, #996912);
   border-radius: 15px;
   padding: 1vh;
-  min-width: 530px;
-  height: 420px;
+  min-width: 520px;
+  height: 370px;
 }
 
 .card-game img {
@@ -1832,6 +1837,22 @@ img.quote-inside {
 .preloader.hidden {
   opacity: 0;
   visibility: hidden; /* Ensures the preloader is not interactable when hidden */
+}
+
+/* WELCOME GAME MSG */
+
+.welcome-game {
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e09828;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 10px;
+    z-index: 1;
 }
 
 /* START GAME 1 QUESTION */

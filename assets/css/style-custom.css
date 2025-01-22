@@ -372,7 +372,7 @@ button {
 .tl-year p {
   color: #fff;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 32px;
 }
 
@@ -530,7 +530,7 @@ img.photos-tsl-inside {
 }
 
 img.photos-tsl-inside-h {
-    max-width: 90vh;
+    max-width: 74vh;
     max-height: 70vh;
     transition: .5s;
     vertical-align: top;

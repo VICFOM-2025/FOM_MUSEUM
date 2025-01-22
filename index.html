@@ -2086,7 +2086,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo6" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo1" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#popphilo6">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/human-cell.jpg"
@@ -2103,7 +2103,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo3" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo2" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#popphilo3">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/practice5.jpg"
@@ -2120,7 +2120,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo1" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo3" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#popphilo1">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/balance3.jpg"
@@ -2137,7 +2137,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo2" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo4" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#popphilo2">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/move.jpg" alt="Thumb">
@@ -2155,7 +2155,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo4" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo5" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#firstModal">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/tsl-golf.jpg"
@@ -2172,7 +2172,7 @@
 
                                 <!-- Single item fadein -->
                                 <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                    <div id="philo5" class="item fadein" data-bs-toggle="modal"
+                                    <div id="philo6" class="item fadein" data-bs-toggle="modal"
                                         data-bs-target="#popphilo5">
                                         <div class="thumb">
                                             <img src="https://hdayat665.github.io/MUZIUM-UM/philo/tiger.jpg"
@@ -3973,8 +3973,8 @@
                 }
                 setTimeout(fadeIn, 1000);
                 setTimeout(fadeOut, 4000);
-                setTimeout(turnOn, 5700);
-                setTimeout(showBoxes, 6200);
+                setTimeout(turnOn, 8000);
+                setTimeout(showBoxes, 9000);
             });
 
             const elts = {
@@ -3993,11 +3993,8 @@
             ];
 
             // Controls the speed of morphing.
-
             const morphTime = 0.2;
-            const cooldownTime = 0.40;
-            // const morphTime = 0.4;
-            // const cooldownTime = 0.90;
+            let cooldownTime = 1;
 
             let textIndex = texts.length - 1;
             let time = new Date();
@@ -4085,6 +4082,7 @@
                 if (cooldown <= 0) {
                     if (shouldIncrementIndex) {
                         textIndex++;
+                        cooldownTime = 0.5;
                     }
 
                     if (textIndex < texts.length) {

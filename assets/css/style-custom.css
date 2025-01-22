@@ -1656,9 +1656,9 @@ img.quote-inside {
 
 .card-game-container {
   position: absolute;
-  bottom: 30px; /* Distance from bottom of the viewport */
+  bottom: -10%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   gap: 100px;

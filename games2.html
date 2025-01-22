@@ -101,7 +101,7 @@
     </section>
 
     <!-- Modal for Prize Eligibility -->
-    <div class="modal fade" id="prizeEligibilityModal" tabindex="-1" aria-labelledby="prizeEligibilityModalLabel"
+    <!-- <div class="modal fade" id="prizeEligibilityModal" tabindex="-1" aria-labelledby="prizeEligibilityModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -117,21 +117,33 @@
                 </div>
             </div>
         </div>
+    </div> -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="prizeEligibilityModal" tabindex="-1" aria-labelledby="prizeEligibilityModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+                <h3 class="bold-text">Congratulations!</h3>
+                <p>Please collect your reward at front desk.</p>
+                <button type="button" class="btn-11 btn-main-start" data-bs-dismiss="modal">
+                    <span class="fw-700">Ok</span> <i class="fas fa-picture"></i>
+                </button>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Modal for Completion -->
     <div class="modal fade" id="completionModal" tabindex="-1" aria-labelledby="completionModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="completionModalLabel">Great Job!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
                 <div class="modal-body">
-                    Congratulations on completing all the questions! Thank you for participating.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                    <h3 class="bold-text">Great Job!</h3>
+                    Congratulations on completing the game! Thank you for participating.
+                    <button type="button" class="btn-11 btn-main-start" data-bs-dismiss="modal">
+                        <span class="fw-700">Ok</span> <i class="fas fa-picture"></i>
+                    </button>
                 </div>
             </div>
         </div>

@@ -998,10 +998,10 @@ a:hover {
 }
 
 .note-tsl {
-    font-size: 18px;
+    font-size: 18px !important;
+    font-weight: 600;
     line-height: 26px;
     text-align: center;
-    color: #ffffff;
     position: absolute;
     bottom: -100px;
     background-color: #b27a06;

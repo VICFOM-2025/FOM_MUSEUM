@@ -1694,7 +1694,7 @@ img.quote-inside {
 
 .card-game-container {
   position: absolute;
-  bottom: -10%;
+  bottom: -15%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

@@ -10,6 +10,7 @@ button, button:hover, button:active, button:focus, button:visited, .btn, .btn:ho
       background: #FFC107;
       font-family: 'Chewy', cursive;
       font-size: 22px;
+      padding: 10px 30px !important;
   }
   #quiz {
     display: flex;

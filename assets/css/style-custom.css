@@ -1861,7 +1861,9 @@ img.quote-inside {
 
 .welcome-game {
     position: absolute;
-    bottom: 65%;
+    top: -20%;
+    width: 100%;
+    text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #e09828;

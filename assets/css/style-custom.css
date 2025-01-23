@@ -419,7 +419,7 @@ button {
 
 .img-wrappernew:hover {
 /*   transform: rotate(90deg) translateZ(-.2px) translateX(0%) translateY(-10vh) scale(1.5); */
-  min-height: 65vh;
+/*   min-height: 65vh; */
 }
 
 /* GALLERY */

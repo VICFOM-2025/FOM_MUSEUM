@@ -556,6 +556,12 @@
                 displayQuestion(questions[0]);
             }
 
+            function displayStats() {
+                document.querySelector("#rate-span").innerHTML = stats.correct + "/" + stats.questionsAsked;
+                document.querySelector("#streak-span").innerHTML = stats.correct + " (" + Math.round((stats.correct/stats.questionsAsked) * 100 || 0) + "%)" ;
+                document.querySelector("#response-time-span").innerHTML = stats.averageResponseTime;
+            }
+
             // Display Question
             function displayQuestion(questionObject) {
                 document.querySelector("#quiz-options").innerHTML = '';

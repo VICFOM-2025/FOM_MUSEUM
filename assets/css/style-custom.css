@@ -404,6 +404,24 @@ button {
     outline: none;
 }
 
+/* GALLERY QUOTE */
+
+.img-wrappernew {
+/*   transform: rotate(90deg); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  transform-origin: 50% 50%;
+/*   transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh); */
+  transition: 1s;
+}
+
+.img-wrappernew:hover {
+/*   transform: rotate(90deg) translateZ(-.2px) translateX(0%) translateY(-10vh) scale(1.5); */
+  min-height: 65vh;
+}
+
 /* GALLERY */
 
 ::-webkit-scrollbar {

@@ -37,7 +37,7 @@
 
 .project-details p {
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 22px;
     color: #000000;
 }
 
@@ -53,7 +53,7 @@ ul.biography-table h5 {
 
 .feature-list-item li {
     color: #000000;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .feature-list-item li::after {
@@ -580,7 +580,7 @@ p {
 }
 
 .modal-dialog-scrollable .modal-body {
-    padding: 10px;
+    padding: 0;
 }
 
 /* Button back */
@@ -1168,18 +1168,21 @@ a:hover {
 
     .circle1 {
       background-color: #ff9999;
+      color: #000000;
       top: 0;
       left: 35%; /* Centered horizontally */
     }
 
     .circle2 {
       background-color: #99ccff;
+      color: #000000;
       top: 25%;
       left: 15%; /* Positioned to overlap */
     }
 
     .circle3 {
       background-color: #99ff99;
+      color: #000000;
       top: 25%;
       left: 55%; /* Positioned to overlap */
     }

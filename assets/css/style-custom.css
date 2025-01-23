@@ -411,7 +411,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 30vh;
+  min-height: 25vh;
   transform-origin: 50% 50%;
 /*   transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh); */
   transition: 1s;
@@ -532,7 +532,7 @@ button {
 }
 
 img.photos-tsl {
-  max-width: 45vh;
+  max-width: 40vh;
   max-height: 50vh;
   transition: .5s;
   vertical-align: top;

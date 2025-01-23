@@ -1276,7 +1276,7 @@ a:hover {
 /* PHILO QUOTE GALLERY */
 
 img.quote-inside {
-    max-width: 120vh;
+    max-width: 100vh;
     /* max-height: 60vh; */
     transition: .5s;
     vertical-align: text-top;

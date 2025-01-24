@@ -668,7 +668,7 @@
             // Display Stats2
             function displayStats2() {
                 document.querySelector("#rate-span_2").innerHTML = stats2.correct2 + "/" + stats2.questions2Asked;
-                document.querySelector("#streak-span_2").innerHTML = stats2.correct2 + " (" + Math.round((stats.correct/stats.questionsAsked) * 100 || 0) + "%)" ;
+                document.querySelector("#streak-span_2").innerHTML = stats2.correct2 + " (" + Math.round((stats2.correct2/stats2.questions2Asked) * 100 || 0) + "%)" ;
                 document.querySelector("#response-time-span_2").innerHTML = stats2.averageResponseTime2;
             }
 

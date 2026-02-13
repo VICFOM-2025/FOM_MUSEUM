@@ -1,684 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Ventix - Personal Portfolio Template">
-    <meta http-equiv="imagetoolbar" content="no" />
+<meta charset="UTF-8">
+<title>Games 2 – Simple Memory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ========== Page Title ========== -->
-    <title>Tan Sri Dr. Lim Wee Chai</title>
-
-    <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="https://hdayat665.github.io/MUZIUM-UM/favicon.png" type="image/x-icon">
-
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/flaticon-set.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/animate.min.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/validnavs.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/helper.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/unit-test.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/style.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/style.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/style-custom.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games22.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games23.css" rel="stylesheet">
-    <link href="https://hdayat665.github.io/MUZIUM-UM/assets/css/games2.css" rel="stylesheet">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<!-- <body class="bg-fixed home-vcard" style="background-image: url(https://hdayat665.github.io/MUZIUM-UM/shape/banner.jpg);"> -->
+<body class="bg-dark text-light">
 
-<body class="bg-fixed home-vcard"
-    style="background-image: url('https://hdayat665.github.io/MUZIUM-UM/interactive/bg-home-game-plain.jpg');">
+<div class="container py-5 text-center">
+    <h2>Memory Game</h2>
+    <p>Click cards to reveal</p>
 
-    <section id="games2">
-        <div class="main-wrapper" data-enter="fadeInLeft" data-exit style="margin-left: 0;">
-            <div class="main-content-area">
-                <div class="game-start">
-                    <div class="section-item animated" id="home">
-                        <div class="banner-style-quiz">
-                            <div id="quiz_2">
-                                <div class="banner-top-quiz">
-                                    <div class="row-quiz">
-                                        <div class="col-lg-12 pr-50">
-                                            <div id="quiz-stats_2" class="row text-center">
-                                                <div class="col-xs-3">
-                                                    <i class="fa fa-bar-chart"></i>
-                                                </div>
-                                                <div class="col-xs-3 col-lg-4">
-                                                    <p>Correct Rate</p>
-                                                    <span id="rate-span_2" class="animated">0/0</span>
-                                                </div>
-                                                <div class="col-xs-3 col-lg-4">
-                                                    <p>Correct Answer</p>
-                                                    <span id="streak-span_2" class="animated">0</span>
-                                                </div>
-                                                <div class="col-xs-3 col-lg-4">
-                                                    <p><span>Avg. </span>Response Time (s)</p>
-                                                    <span id="response-time-span_2" class="animated">0</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xs-12 col-md-10 col-md-offset-1 text-center"
-                                            style="margin: 0 auto;">
-                                            <div id="quiz-question_2"></div>
-                                            <div id="quiz-options_2"></div>
-                                        </div>
-                                        <div id="quiz-play-again_2">
-                                            <button id="quiz-play-again-btn_2">Play Again</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <p class="scroll-info">
-                    <a href="https://hdayat665.github.io/MUZIUM-UM/gamesHomepage.html">
-                        <span class="icon" style="display: flex; align-item fadeins: center;">
-                            <img src="https://hdayat665.github.io/MUZIUM-UM/logo/back-arrow.svg"
-                                style="width: 40px; margin-right: 5px;">
-                        </span>
-                    </a>
-                    <a href="https://hdayat665.github.io/MUZIUM-UM/index.html">
-                        <span class="icon" style="display: flex; align-item fadeins: center;">
-                            <img src="https://hdayat665.github.io/MUZIUM-UM/logo/home.svg"
-                                style="width: 40px; margin-right: 5px;">
-                        </span>
-                    </a>
-                </p> -->
-            </div>
-        </div>
-    </section>
+    <div id="game-board" class="row g-3 justify-content-center"></div>
 
-    <!-- Modal for Prize Eligibility -->
-    <!-- <div class="modal fade" id="prizeEligibilityModal" tabindex="-1" aria-labelledby="prizeEligibilityModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="prizeEligibilityModalLabel">Congratulations!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    You answered 7 questions correctly and are eligible to win the prize!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
+    <button id="restart-btn" class="btn btn-primary mt-4">Restart</button>
+</div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="prizeEligibilityModal" tabindex="-1" aria-labelledby="prizeEligibilityModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-                <h3 class="bold-text">Congratulations!</h3>
-                <p>Please collect your reward at front desk.</p>
-                <button type="button" class="btn-11 btn-main-start" data-bs-dismiss="modal">
-                    <span class="fw-700">Ok</span> <i class="fas fa-picture"></i>
-                </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal for Completion -->
-    <div class="modal fade" id="completionModal" tabindex="-1" aria-labelledby="completionModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-body text-center">
-                    <h3 class="bold-text">Great Job!</h3>
-                    <p>Congratulations on completing the game!<br>Thank you for participating.</p>
-                    <button type="button" class="btn-11 btn-main-start" data-bs-dismiss="modal">
-                        <span class="fw-700">Ok</span> <i class="fas fa-picture"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+function games2Js(){
 
-    <!-- jQuery Frameworks
-    ============================================= -->
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.appear.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/swiper-bundle.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/progress-bar.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/circle-progress.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/isotope.pkgd.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/count-to.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.scrolla.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/ScrollOnReveal.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/YTPlayer.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/validnavs.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/gsap.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/typed.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/TweenMax.min.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/main.js"></script>
-    <script src="https://hdayat665.github.io/MUZIUM-UM/gamesJs/games23.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-    <!-- <script type="text/javascript" language="javascript" src="matchgame.js"></script> -->
-    <!-- <script src="https://hdayat665.github.io/MUZIUM-UM/assets/js/jquery.easing.min.js"></script> -->
+    const icons = ["🍎","🍌","🍇","🍓","🍎","🍌","🍇","🍓"];
+    let shuffled = [];
+    let opened = [];
 
-    <!-- screen saver function -->
-    <script>
-        games2Js();
-        function games2Js() {
-            questions2 = [{
-                question: "1. How many times do we need to brush our teeth and clean our tongue daily?",
-                answers: [{
-                    answer: "Once",
-                    isCorrect: false
-                },
-                {
-                    answer: "Three times",
-                    isCorrect: true
-                },
-                {
-                    answer: "More than three times",
-                    isCorrect: false
-                },
-                {
-                    answer: "Twice",
-                    isCorrect: false
-                },
-                ]
-            },
-            // {
-            //     question: "2. How often do you clean your tongue each day?",
-            //     answers: [{
-            //             answer: "Once",
-            //             isCorrect: false
-            //         },
-            //         {
-            //             answer: "Three times",
-            //             isCorrect: true
-            //         },
-            //         {
-            //             answer: "Twice",
-            //             isCorrect: false
-            //         },
-            //         {
-            //             answer: "More than three times",
-            //             isCorrect: false
-            //         }
-            //     ]
-            // },
-            {
-                question: "2. How many times do you take a shower in a day?",
-                answers: [{
-                    answer: "Once",
-                    isCorrect: false
-                },
-                {
-                    answer: "Twice",
-                    isCorrect: true
-                },
-                {
-                    answer: "Three times",
-                    isCorrect: false
-                },
-                {
-                    answer: "More than three times",
-                    isCorrect: false
-                }
-                ]
-            },
-            {
-                question: "3. How many glasses of water should we drink each day?",
-                answers: [{
-                    answer: "8 Glasses",
-                    isCorrect: true
-                },
-                {
-                    answer: "6 Glasses",
-                    isCorrect: false
-                },
-                {
-                    answer: "2 Glasses",
-                    isCorrect: false
-                },
-                {
-                    answer: "7 Glasses",
-                    isCorrect: false
-                }
-                ]
-            },
-            {
-                question: "4. By being disciplined and having the knowledge to eat properly every day, we improve our body’s health, especially our brain and _____",
-                answers: [{
-                    answer: "Body",
-                    isCorrect: false
-                },
-                {
-                    answer: "Leg",
-                    isCorrect: false
-                },
-                {
-                    answer: "Heart",
-                    isCorrect: true
-                },
-                {
-                    answer: "Hand",
-                    isCorrect: false
-                }
-                ]
-            },
-            {
-                question: "5. When the same task is done over and over again, ______",
-                answers: [{
-                    answer: "be honest",
-                    isCorrect: false
-                },
-                {
-                    answer: "makes perfect",
-                    isCorrect: false
-                },
-                {
-                    answer: "we become experts",
-                    isCorrect: true
-                },
-                    // {
-                    //     answer: "Cousin",
-                    //     isCorrect: false
-                    // }
-                ]
-            },
-            {
-                question: "6. Have a positive mindset and ______",
-                answers: [{
-                    answer: "be honest",
-                    isCorrect: true
-                },
-                {
-                    answer: "makes perfect",
-                    isCorrect: false
-                },
-                {
-                    answer: "we become experts",
-                    isCorrect: false
-                },
-                    // {
-                    //     answer: "Cousin",
-                    //     isCorrect: false
-                    // }
-                ]
-            },
-            {
-                question: "7. Practice ______",
-                answers: [{
-                    answer: "be honest",
-                    isCorrect: false
-                },
-                {
-                    answer: "makes perfect",
-                    isCorrect: true
-                },
-                {
-                    answer: "we become experts",
-                    isCorrect: false
-                },
-                    // {
-                    //     answer: "Cousin",
-                    //     isCorrect: false
-                    // }
-                ]
-            },
-            {
-                question: "8. Exercise for at least 30 mins, 4 to 5 days a week for a healthy body.",
-                answers: [{
-                    answer: "True",
-                    isCorrect: true
-                },
-                {
-                    answer: "False",
-                    isCorrect: false
-                },
-                ]
-            },
-            {
-                question: "9. Stress is healthy for the body.",
-                answers: [{
-                    answer: "True",
-                    isCorrect: false
-                },
-                {
-                    answer: "False",
-                    isCorrect: true
-                },
-                ]
-            }
-            ];
+    function shuffle(){
+        shuffled = icons.sort(() => 0.5 - Math.random());
+    }
 
-            let stats2 = {
-                questions2Asked: 0,
-                correct2: 0,
-                correct2Streak: 0,
-                currentTime2: null,
-                averageResponseTime2: 0
-            };
+    function render(){
+        const board = document.querySelector("#game-board");
+        board.innerHTML = "";
 
-            initiateGame();
+        shuffled.forEach((icon, i) => {
+            const col = document.createElement("div");
+            col.className = "col-3";
 
-            // Handle click events
-            document.addEventListener("click", function (event) {
-                if (event.target.classList.contains("quiz-ans-btn2")) {
-                    Array.from(document.querySelectorAll(".quiz-ans-btn2")).forEach(btn => btn.disabled =
-                        true); // Disable buttons
-                    event.target.blur();
-                    const choice = Number(event.target.id.split("-")[2]);
+            const btn = document.createElement("button");
+            btn.className = "btn btn-outline-light w-100 p-4 card-btn";
+            btn.dataset.icon = icon;
+            btn.dataset.index = i;
+            btn.textContent = "❓";
 
-                    const responseTime = round((new Date() - stats2.currentTime2) / 1000, 2);
-                    stats2.averageResponseTime2 = round((stats2.averageResponseTime2 * (stats2
-                        .questions2Asked -
-                        1) + responseTime) / stats2.questions2Asked, 2);
-                    if (questions2[0].answers[choice].isCorrect) {
-                        event.target.classList.add("pulse", "correct2");
-                        stats2.correct2++;
-                        stats2.correct2Streak++;
+            col.appendChild(btn);
+            board.appendChild(col);
+        });
+    }
 
-                        if (stats2.correct2 == 7) {
-                            showPrizeEligibilityModal();
-                        }
+    document.addEventListener("click", function(e){
+        if(!e.target.classList.contains("card-btn")) return;
 
-                        setTimeout(() => {
-                            nextQuestion();
-                        }, 1250);
-                    } else {
-                        event.target.classList.add("shake", "incorrect2");
-                        stats2.correct2Streak = 0;
-                        setTimeout(() => {
-                            const correct2AnswerId = "quiz-ans-" + questions2[0].answers.findIndex(
-                                elem => elem.isCorrect);
-                            document.querySelector("#" + correct2AnswerId).classList.add(
-                                "correct2");
-                            setTimeout(() => {
-                                nextQuestion();
-                            }, 1500);
-                        }, 750);
-                    }
-                    displayStats2();
-                }
-            });
+        const btn = e.target;
+        btn.textContent = btn.dataset.icon;
+        opened.push(btn);
 
-            // Handle "quiz-play-again-btn_2" Click
-            document.querySelector("#quiz-play-again-btn_2").addEventListener("click", function () {
-                document.querySelector("#quiz-play-again-btn_2").classList.remove("infinite", "pulse");
-                document.querySelector("#quiz-play-again-btn_2").classList.add("flipOutX");
+        if(opened.length === 2){
+            if(opened[0].dataset.icon !== opened[1].dataset.icon){
                 setTimeout(() => {
-                    document.querySelector("#quiz-play-again-btn_2").classList.remove("flipOutX");
-                    document.querySelector("#quiz-play-again_2").style.display = "none";
-                    questions2 = [{
-                        question: "1. How many times a day do you brush your teeth?",
-                        answers: [{
-                            answer: "Once",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Twice",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Three times",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "More than three times",
-                            isCorrect: false
-                        }
-                        ]
-                    },
-                    {
-                        question: "2. How often do you clean your tongue each day?",
-                        answers: [{
-                            answer: "Once",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Twice",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "More than three times",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Three times",
-                            isCorrect: true
-                        },
-                        ]
-                    },
-                    {
-                        question: "3. How many times do you take a shower in a day?",
-                        answers: [{
-                            answer: "Once",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Three times",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Twice",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "More than three times",
-                            isCorrect: false
-                        }
-                        ]
-                    },
-                    {
-                        question: "4. How many glasses of water should we drink each day?",
-                        answers: [{
-                            answer: "8 Glasses",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "6 Glasses",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "2 Glasses",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "7 Glasses",
-                            isCorrect: false
-                        }
-                        ]
-                    },
-                    {
-                        question: "5. By being disciplined and having the knowledge to eat properly every day, we improve our body’s healthy, especially our brain and _____",
-                        answers: [{
-                            answer: "Body",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Leg",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "Heart",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "Hand",
-                            isCorrect: false
-                        }
-                        ]
-                    },
-                    {
-                        question: "6. When the same task is done over and over again, ______",
-                        answers: [{
-                            answer: "be honest",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "makes perfect",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "we become experts",
-                            isCorrect: true
-                        },
-                            // {
-                            //     answer: "Cousin",
-                            //     isCorrect: false
-                            // }
-                        ]
-                    },
-                    {
-                        question: "7. Have a positive mindset and ______",
-                        answers: [{
-                            answer: "be honest",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "makes perfect",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "we become experts",
-                            isCorrect: false
-                        },
-                            // {
-                            //     answer: "Cousin",
-                            //     isCorrect: false
-                            // }
-                        ]
-                    },
-                    {
-                        question: "8. Practice ______",
-                        answers: [{
-                            answer: "be honest",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "makes perfect",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "we become experts",
-                            isCorrect: false
-                        },
-                            // {
-                            //     answer: "Cousin",
-                            //     isCorrect: false
-                            // }
-                        ]
-                    },
-                    {
-                        question: "9. Exercise for at least 30 mins, 4 to 5 days a week for a healthy body.",
-                        answers: [{
-                            answer: "True",
-                            isCorrect: true
-                        },
-                        {
-                            answer: "False",
-                            isCorrect: false
-                        },
-                        ]
-                    },
-                    {
-                        question: "10. Stress is healthy for the body.",
-                        answers: [{
-                            answer: "True",
-                            isCorrect: false
-                        },
-                        {
-                            answer: "False",
-                            isCorrect: true
-                        },
-                        ]
-                    }
-                    ];
-                    stats2 = {
-                        questions2Asked: 0,
-                        correct2: 0,
-                        correct2Streak: 0,
-                        currentTime2: null,
-                        averageResponseTime2: 0
-                    };
-                    displayStats2();
-                    initiateGame();
-                }, 750);
-            });
-
-            function showPrizeEligibilityModal() {
-                const modal = new bootstrap.Modal(document.getElementById('prizeEligibilityModal'));
-                modal.show();
+                    opened.forEach(b => b.textContent = "❓");
+                    opened = [];
+                }, 800);
+            } else {
+                opened = [];
             }
-
-            // Function to show the congrats modal
-            function showCompletionModal() {
-                const modal = new bootstrap.Modal(document.getElementById('completionModal'));
-                modal.show();
-            }
-
-            // Initiate New Game
-            function initiateGame() {
-                displayQuestion(questions2[0]);
-            }
-
-            // Display Question
-            function displayQuestion(questionObject) {
-                document.querySelector("#quiz-options_2").innerHTML = '';
-                document.querySelector("#quiz-question_2").innerHTML = '';
-                document.querySelector("#quiz-question_2").innerHTML = questionObject.question;
-                stats2.questions2Asked++;
-                stats2.currentTime2 = new Date();
-                for (let i = 0; i < questionObject.answers.length; i++) {
-                    let button = document.createElement("button");
-                    button.id = "quiz-ans-" + i;
-                    button.classList.add("btn", "quiz-ans-btn2");
-                    button.innerHTML = questionObject.answers[i].answer;
-                    button.disabled = false;
-                    document.querySelector("#quiz-options_2").appendChild(button);
-                }
-            }
-
-            // Remove current question and display next one
-            function nextQuestion() {
-                document.querySelector("#quiz-question_2").innerHTML = '';
-                document.querySelector("#quiz-options_2").innerHTML = '';
-                if (questions2.length > 1) {
-                    questions2.shift();
-                    displayQuestion(questions2[0]);
-                } else {
-                    showCompletionModal();
-                    document.querySelector("#quiz-play-again_2").style.display = "none";
-                }
-            }
-
-            // Display Stats2
-            function displayStats2() {
-                document.querySelector("#rate-span_2").innerHTML = stats2.correct2 + "/" + stats2.questions2Asked;
-                document.querySelector("#streak-span_2").innerHTML = stats2.correct2 + " (" + Math.round((stats2.correct2/stats2.questions2Asked) * 100 || 0) + "%)" ;
-                document.querySelector("#response-time-span_2").innerHTML = stats2.averageResponseTime2;
-            }
-
-            // Auxiliary rounding function
-            function round(value, decimals) {
-                return Number(Math.round(value + 'e' + decimals) + 'e-' + decimals);
-            }
-
         }
-    </script>
-</body>
+    });
 
+    document.querySelector("#restart-btn").addEventListener("click", function(){
+        shuffle();
+        render();
+    });
+
+    shuffle();
+    render();
+}
+games2Js();
+</script>
+
+</body>
 </html>
